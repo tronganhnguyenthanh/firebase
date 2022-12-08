@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import {Card} from "flowbite-react"
 import {doc, getDoc} from "firebase/firestore"
 import {useParams} from "react-router-dom"
-import db from "../firebase/firebaseConfig"
+import db from "../config/databaseConfig/firebaseConfig"
 const UserDetail = () => {
   const {id} = useParams()
   const [detail, setDetail] = useState({})

@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import {Button, Label, TextInput} from "flowbite-react"
 import {collection, addDoc} from "firebase/firestore"
-import db from "../firebase/firebaseConfig"
+import db from "../config/databaseConfig/firebaseConfig"
 import {useNavigate} from "react-router-dom"
 import {ToastContainer, toast} from "react-toastify"
 const FormAddUser = () => {
