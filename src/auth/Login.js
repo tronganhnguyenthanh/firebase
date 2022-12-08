@@ -51,7 +51,7 @@ const Login = () => {
         </div>
         <div className="flex">
           <Button onClick={signIn}>Sign in</Button>
-          <Link className="mt-2 ml-1" to="/forgot-password">Forgot password ?</Link>
+          <Link className="mt-2 ml-1 underline hover:text-blue-600" to="/forgot-password">Forgot password ?</Link>
         </div>
       </form>
     </>
