@@ -1,17 +1,23 @@
 import React from "react"
 import {Button} from "flowbite-react"
+import {useNavigate} from "react-router-dom"
 import useCustomHookList from "../customHooks/useCustomHookList"
 import UserItem from "./UserItem"
-import {useNavigate} from "react-router-dom"
 const UserList = () => {
   const users = useCustomHookList()
   const navigate = useNavigate()
   const goBack = () => {
    navigate(-1)
   }
+  const logOut = () => {
+   navigate("/login/user")
+  }
   return (
     <>
       <div className="overflow-x-auto relative shadow-md sm:rounded-lg gap-2">
+        <div className="flex justify-end p-2">
+          <Button onClick={logOut}>Sign out</Button>
+        </div>
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-1">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
