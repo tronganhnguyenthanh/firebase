@@ -6,12 +6,13 @@ import Register from "../auth/Register"
 import FormAddUser from "../components/FormAddUser"
 import UserDetail from "../components/UserDetail"
 import UserList from "../components/UserList"
+import "../customCSS/form.css"
 const App = () => {
   return (
    <div className="App">
      <Routes>
        <Route path="/" element={<Register/>}/>
-       <Route path="/login/user" element={<Login/>}/>
+       <Route path="/user/login" element={<Login/>}/>
        <Route path="/forgot-password" element={<ForgotPassword/>}/>
        <Route path="/user/add" element={<FormAddUser/>}/>
        <Route path="/user/list" element={<UserList/>}/>

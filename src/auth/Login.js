@@ -10,38 +10,41 @@ const Login = () => {
   const [error, setError] = useState([])
   const navigate = useNavigate()
   const signIn = async () => {
-    if(email === ""){
+    if (email === "") {
       toast.error("Please enter your email", {position:"top-center"})
       return false
     }
     if (password === "") {
       toast.error("Please enter your password", {position:"top-center"})
       return false
-    }else{
-      try{
+    } else {
+      try {
         await signInWithEmailAndPassword(auth, email, password)
         navigate("/user/list")
       } catch (error) {
-         const errorMessage = error.message
-         setError(errorMessage)
+        const errorMessage = error.message
+        setError(errorMessage)
       }
       return true
     }
   }
   return (
     <>
-      <ToastContainer/>
-      <form className="container mx-auto flex flex-col gap-4 py-48 p-3">
+      <ToastContainer />
+      <form className="container mx-auto flex flex-col gap-4 py-48 p-3 mt-28 form-border">
         <p className="text-red-600">{error}</p>
         <div>
           <div className="mb-2 block">
-            <Label value="Email" />
+            <Label value="Email" className="text-white"/>
           </div>
-          <TextInput value={email} onChange={(e) => setEmail(e.target.value)} />
+          <TextInput
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
         <div>
           <div className="mb-2 block">
-            <Label value="Password" />
+            <Label value="Password" className="text-white"/>
           </div>
           <TextInput
             value={password}
@@ -51,7 +54,12 @@ const Login = () => {
         </div>
         <div className="flex">
           <Button onClick={signIn}>Sign in</Button>
-          <Link className="mt-2 ml-1 underline hover:text-blue-600" to="/forgot-password">Forgot password ?</Link>
+          <Link
+            className="mt-2 ml-1 underline text-white hover:text-blue-600"
+            to="/forgot-password"
+          >
+            Forgot password ?
+          </Link>
         </div>
       </form>
     </>

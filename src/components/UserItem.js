@@ -14,10 +14,10 @@ const UserItem = ({user}) => {
   }
   return (
     <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-      <td className="py-4 px-6 text-center border-r">{user?.firstName}</td>
-      <td className="py-4 px-6 text-center border-r">{user?.lastName}</td>
-      <td className="py-4 px-6 text-center border-r">{user?.email}</td>
-      <td className="py-4 px-6 text-center border-r">{user?.phoneNumber}</td>
+      <td className="py-4 px-6 text-center border-r whitespace-nowrap">{user?.firstName}</td>
+      <td className="py-4 px-6 text-center border-r whitespace-nowrap">{user?.lastName}</td>
+      <td className="py-4 px-6 text-center border-r whitespace-nowrap">{user?.email}</td>
+      <td className="py-4 px-6 text-center border-r whitespace-nowrap">{user?.phoneNumber}</td>
       <td className="flex justify-center py-4">
         <div className="flex gap-2">
           <Button onClick={() => handleViewUser(user?.id)}>View</Button>

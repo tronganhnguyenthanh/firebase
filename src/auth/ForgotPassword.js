@@ -15,17 +15,17 @@ const ForgotPassword = () => {
       return false
     } else {
       await sendPasswordResetEmail(auth, resetPassword)
-      navigate("/login/user")
+      navigate("/user/login")
       return true
     }
   }
   return (
     <>
       <ToastContainer/>
-      <form className="container mx-auto flex flex-col gap-4 py-48 p-3">
+      <form className="container mx-auto flex flex-col gap-4 py-48 p-3 mt-44 form-border">
         <div>
           <div className="mb-2 block">
-            <Label value="Reset password" />
+            <Label value="Reset password" className="text-white"/>
           </div>
           <TextInput
             value={resetPassword}

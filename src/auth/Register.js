@@ -31,17 +31,17 @@ const Register = () => {
   return (
     <>
       <ToastContainer/>
-      <form className="container mx-auto flex flex-col gap-4 py-48 p-3">
+      <form className="container mx-auto flex flex-col gap-4 py-48 p-3 mt-28 form-border">
         <p className="text-red-600">{error}</p>
         <div>
           <div className="mb-2 block">
-            <Label value="Email" />
+            <Label value="Email" className="text-white"/>
           </div>
           <TextInput value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div>
           <div className="mb-2 block">
-            <Label value="Password" />
+            <Label value="Password" className="text-white"/>
           </div>
           <TextInput
             value={password}
