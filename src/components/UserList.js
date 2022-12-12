@@ -8,8 +8,8 @@ const UserList = () => {
   const users = useCustomHookList()
   const [email, setEmail] = useState("")
   auth.onAuthStateChanged((user) => {
-   if(user){
-    setEmail(user.email);
+   if(user !== null){
+    setEmail(user.email)
    }
   })
   const navigate = useNavigate()

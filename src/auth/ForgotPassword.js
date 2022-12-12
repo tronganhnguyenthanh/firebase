@@ -25,7 +25,10 @@ const ForgotPassword = () => {
       <form className="container mx-auto flex flex-col gap-4 py-48 p-3 mt-44 form-border">
         <div>
           <div className="mb-2 block">
-            <Label value="Reset password" className="text-white"/>
+            <Label 
+              value="Reset password" 
+              style={{color:"#fff"}}
+            />
           </div>
           <TextInput
             value={resetPassword}

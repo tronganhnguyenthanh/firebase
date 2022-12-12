@@ -35,7 +35,10 @@ const Login = () => {
         <p className="text-red-600">{error}</p>
         <div>
           <div className="mb-2 block">
-            <Label value="Email" className="text-white"/>
+            <Label 
+              value="Email" 
+              style={{color:"#fff"}}
+            />
           </div>
           <TextInput
             value={email}
@@ -44,7 +47,10 @@ const Login = () => {
         </div>
         <div>
           <div className="mb-2 block">
-            <Label value="Password" className="text-white"/>
+            <Label 
+              value="Password" 
+              style={{color:"#fff"}}
+            />
           </div>
           <TextInput
             value={password}
@@ -55,7 +61,7 @@ const Login = () => {
         <div className="flex">
           <Button onClick={signIn}>Sign in</Button>
           <Link
-            className="mt-2 ml-1 underline text-white hover:text-blue-600"
+            className="mt-2 ml-1 underline text-white hover:text-blue-600 p-1"
             to="/forgot-password"
           >
             Forgot password ?

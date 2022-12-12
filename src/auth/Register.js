@@ -35,13 +35,19 @@ const Register = () => {
         <p className="text-red-600">{error}</p>
         <div>
           <div className="mb-2 block">
-            <Label value="Email" className="text-white"/>
+            <Label 
+              value="Email" 
+              style={{color:"#fff"}}
+            />
           </div>
           <TextInput value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div>
           <div className="mb-2 block">
-            <Label value="Password" className="text-white"/>
+            <Label 
+              value="Password" 
+              style={{color:"#fff"}}
+            />
           </div>
           <TextInput
             value={password}
