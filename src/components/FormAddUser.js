@@ -37,11 +37,14 @@ const FormAddUser = () => {
     }
   }
   return (
-   <form className="container mx-auto flex flex-col gap-4 py-48 p-3">
+   <form className="container mx-auto flex flex-col gap-4 py-48 p-3 mt-24 form-border">
      <ToastContainer/>
      <div>
        <div className="mb-2 block">
-         <Label value="Firstname"/>
+         <Label 
+           value="Firstname"
+           style={{color:"#fff"}}
+         />
        </div>
        <TextInput
          value={firstName}
@@ -50,7 +53,10 @@ const FormAddUser = () => {
      </div>
      <div>
        <div className="mb-2 block">
-         <Label value="Lastname"/>
+         <Label 
+           value="Lastname"
+           style={{color:"#fff"}}
+         />
        </div>
        <TextInput
          value={lastName}
@@ -59,7 +65,10 @@ const FormAddUser = () => {
      </div>
      <div>
        <div className="mb-2 block">
-         <Label value="Email"/>
+         <Label 
+           value="Email"
+           style={{color:"#fff"}}
+         />
        </div>
        <TextInput
          value={email}
@@ -68,7 +77,10 @@ const FormAddUser = () => {
      </div>
      <div>
        <div className="mb-2 block">
-         <Label value="Phone number"/>
+         <Label 
+           value="Phone number"
+           style={{color:"#fff"}}
+         />
        </div>
        <TextInput
          value={phoneNumber}

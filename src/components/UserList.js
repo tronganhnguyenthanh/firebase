@@ -14,7 +14,7 @@ const UserList = () => {
   })
   const navigate = useNavigate()
   const goBack = () => {
-   navigate(-1)
+   navigate("/user/add")
   }
   const logOut = () => {
    navigate("/user/login")
