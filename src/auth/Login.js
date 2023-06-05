@@ -10,6 +10,8 @@ const Login = () => {
   const [error, setError] = useState([])
   const navigate = useNavigate()
   const signIn = async () => {
+    localStorage.setItem("email", email)
+    localStorage.setItem("password", password)
     if (email === "") {
       toast.error("Please enter your email", {position:"top-center"})
       return false

@@ -40,7 +40,10 @@ const Register = () => {
               style={{color:"#fff"}}
             />
           </div>
-          <TextInput value={email} onChange={(e) => setEmail(e.target.value)} />
+          <TextInput 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+          />
         </div>
         <div>
           <div className="mb-2 block">

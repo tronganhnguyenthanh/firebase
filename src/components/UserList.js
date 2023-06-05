@@ -17,8 +17,11 @@ const UserList = () => {
    navigate("/user/add")
   }
   const logOut = () => {
+   localStorage.getItem("email")
+   localStorage.getItem("password")
    navigate("/user/login")
   }
+
   return (
     <>
       <div className="overflow-x-auto relative shadow-md sm:rounded-lg gap-2">
@@ -26,8 +29,8 @@ const UserList = () => {
           <p className="p-2">{email}</p>
           <Button onClick={logOut}>Sign out</Button>
         </div>
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-1">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-1">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="text-center border-r">
                 Firstname
@@ -45,15 +48,15 @@ const UserList = () => {
                 Action
               </th>
             </tr>
-          </thead>
-          <tbody>
-            {users?.length > 0 && users?.map((i) => {
-              return <UserItem user={i} key={i?.id}/>
-             })
-            }
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+             {users?.length > 0 && users?.map((i) => {
+               return <UserItem user={i} key={i?.id}/>
+              })
+             }
+            </tbody>
+         </table>
+       </div>
       <div className="flex justify-start p-2">
         <Button color="purple" className="mt-1" onClick={goBack}>Back to add user</Button>
       </div>

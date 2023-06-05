@@ -14,9 +14,12 @@ const ForgotPassword = () => {
       })
       return false
     } else {
-      await sendPasswordResetEmail(auth, resetPassword)
-      navigate("/user/login")
-      return true
+       await sendPasswordResetEmail(auth, resetPassword)
+       toast.success("Your reset password has been sent by the email", {position:"top-center"})
+       setTimeout(() => {
+        navigate("/user/login")
+       },2000)
+       return true
     }
   }
   return (

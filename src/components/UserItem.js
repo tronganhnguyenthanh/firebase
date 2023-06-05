@@ -16,8 +16,12 @@ const UserItem = ({user}) => {
     <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
       <td className="py-4 px-6 text-center border-r whitespace-nowrap">{user?.firstName}</td>
       <td className="py-4 px-6 text-center border-r whitespace-nowrap">{user?.lastName}</td>
-      <td className="py-4 px-6 text-center border-r whitespace-nowrap">{user?.email}</td>
-      <td className="py-4 px-6 text-center border-r whitespace-nowrap">{user?.phoneNumber}</td>
+      <td className="py-4 px-6 text-center border-r whitespace-nowrap">
+        <a href={`mailto:${user?.email}`} style={{color:"#08f"}}>{user?.email}</a>
+      </td>
+      <td className="py-4 px-6 text-center border-r whitespace-nowrap">
+        <a href={`tel:${user?.phoneNumber}`} style={{color:"violet"}}>{user?.phoneNumber}</a>
+      </td>
       <td className="flex justify-center py-4">
         <div className="flex gap-2">
           <Button onClick={() => handleViewUser(user?.id)}>View</Button>
